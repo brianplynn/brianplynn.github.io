@@ -1,4 +1,4 @@
-/*@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
 
 body {
   font-family: 'Didact Gothic', sans-serif;
@@ -28,4 +28,4 @@ header {
 
 #contact-buttons {
   visibility: hidden;
-}*/
+}
