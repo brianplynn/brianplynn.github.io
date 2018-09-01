@@ -3,12 +3,11 @@
 <head>
   <title>Brian Lynn - Web Developer</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="styles/custom.css">
 </head>
 <!-- 
-todo: get rid of toggle bars and make transitions auto
-      make imgs same size
-      make text on bottom change color when slide transitions -->
+todo: make text on bottom change color when slide transitions 
+              typing animation-->
   <body>
     <header id="title">
       <h1 id="name">BRIAN LYNN</h1>
@@ -29,16 +28,22 @@ todo: get rid of toggle bars and make transitions auto
         </div>
       </div>
     </div>
+    <div class="module-container">
+      <div class="module" id="about-module"></div>
+      <div class="module" id="">ther</div>
+      <div class="module">a</div>
+      <div class="module">b</div>
+    </div>
     <section id="navbar">
-      <div><a class="navlink" href="#welcome-section">ABOUT</a></div>
-      <div><a class="navlink" href="#welcome-section">PROJECTS</a></div>
-      <div><a class="navlink" href="#contact-info">SOCIAL</a></div>
-      <div><a class="navlink" href="#contact-info">CONTACT</a></div>
+      <button class="navlink" id="about-btn">ABOUT</button>
+      <button class="navlink" id="projects-btn">PROJECTS</button>
+      <button class="navlink" id="social-btn">SOCIAL</button>
+      <button class="navlink" id="contact-btn">CONTACT</button>
     </section>
 
     <footer>
       <div id = "contact-buttons">
-        <button class="social" ><a href="https://www.facebook.com/brian.lynn.906">Facebook</a></button>
+        <button class="social"><a href="https://www.facebook.com/brian.lynn.906">Facebook</a></button>
         <button class="social" >GitHub</button>
         <button class="social" >Email me</button>
         <button class="social" >Call me</button>
@@ -47,5 +52,6 @@ todo: get rid of toggle bars and make transitions auto
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
   </body>
 </html>
