@@ -58,35 +58,65 @@ todo: make text on bottom change color when slide transitions
         <div class="projects-header"><h2>My Projects:</h2></div>
         <div class="project-tile-container">
           <div class="project-tile">
-              <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642794/d084d718-6171-11e6-83fa-ede5d0a67ad2.png" />
+              <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642794/d084d718-6171-11e6-83fa-ede5d0a67ad2.png">
           </div>
           <div class="project-tile">
-              <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642771/7cd6a0c4-6171-11e6-87fb-915f6084d104.png" />
+              <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642771/7cd6a0c4-6171-11e6-87fb-915f6084d104.png">
           </div>
           <div class="project-tile">
-              <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642772/7d02406c-6171-11e6-8c79-40a2933163dc.png" />
+              <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642772/7d02406c-6171-11e6-8c79-40a2933163dc.png">
           </div>
           <div class="project-tile">
-              <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642773/7d08cb94-6171-11e6-8c45-22e7cf64683e.png" />
+              <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642773/7d08cb94-6171-11e6-8c45-22e7cf64683e.png">
           </div>
           <div class="project-tile">
-              <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642774/7d091806-6171-11e6-8d47-ecf2f2833fe2.png" />
+              <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642774/7d091806-6171-11e6-8d47-ecf2f2833fe2.png">
           </div>
           <div class="project-tile">
-              <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642775/7d354304-6171-11e6-8b56-66eee4681d88.png" />
+              <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642775/7d354304-6171-11e6-8b56-66eee4681d88.png">
           </div>
         </div>
       </div>
       <div class="module" id="social-module">
-        social
-        <div id = "contact-buttons">
-          <button class="social"><a href="https://www.facebook.com/brian.lynn.906">Facebook</a></button>
-          <button class="social" >GitHub</button>
-          <button class="social" >Email me</button>
-          <button class="social" >Call me</button>
+        <div class="social-header"><h2>Let's get in touch:</h2></div>
+        <div id = "social-buttons">
+          <div class="social-btn">
+            <a href="https://www.facebook.com/brian.lynn.906" target="_blank">
+            <img src="images/facebook.png">
+            </a>
+          </div>
+          <div class="social-btn">
+          <a href="https://www.linkedin.com/in/brian-lynn-729145117/" target="_blank">
+            <img src="images/linkedin.png">
+          </a>
+          </div>
+          <div class="social-btn">
+            <a href="https://github.com/brianplynn" target="_blank">
+              <img src="images/github.png">
+            </a>
+          </div>
+          <div class="social-btn">
+            <a href="mailto:brnlynn889@gmail.com">
+              <img src="images/gmail.png">
+            </a>
+          </div>
         </div>
       </div>
-      <div class="module" id="contact-module">contact</div>
+      <div class="module" id="contact-module">
+        <div class="contact-header"><h2>Have a question or want to work together?</h2></div>
+        <form>
+          <div class="form-group">
+            <input class="form-control" id="name-input" type="text" placeholder="Name">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="E-mail">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Message"></textarea>
+          </div>
+          <button type="submit" id="contact-submit-btn" class="btn btn-primary mb-2">Submit</button>
+        </form>
+      </div>
     </div>
     <section id="navbar">
       <button id="home-btn">HOME</button>
