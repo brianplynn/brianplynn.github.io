@@ -134,15 +134,43 @@ img {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.project-tile {
+.modal-btn {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0px;
+  margin: 0px;
+  background-color: #c6bba9;
   width: 250px;
-  height: auto;
+  height: 175px;
   margin: 30px 5px;
-  
+}
+
+.project-title {
+  width: 100%;
+  height: 175px;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 .project-image {
   width: 100%;
   height: 100%;
+  margin-top: -200px;
+}
+
+.project-image:hover {
+  opacity: 0;
+}
+
+.modal-github-button {
+  background-color: #e1d4c0;
+  border: none;
+  color: rgb(0,0,70);
+}
+.modal-github-button:hover {
+  background-color: #c6bba9;
 }
 #social-module {
   flex-direction: column;
@@ -187,12 +215,18 @@ form {
   border: none;
   color: rgb(0,0,70);
 }
+
+#contact-submit-btn:hover {
+  background-color: #c6bba9;
+  color: white;
+}
+
+
 #navbar {
   display: flex;
   justify-content: center;
   margin-top: 50px;
 }
-
 
 .navlink {
 	color: rgb(0,0,70);

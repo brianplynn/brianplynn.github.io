@@ -2,24 +2,44 @@ let imgArr = Array.from(document.querySelectorAll(".carousel-item"));
 let btnArr = Array.from(document.querySelectorAll(".navlink"));
 let homeBtn = document.getElementById("home-btn");
 let title = document.getElementById("title");
-let carousel = document.getElementById("carouselExampleFade");
+let carousel = document.getElementById("carousel-outer");
+let currSlide = 0;
+let overNavBar = false;
 let moduleArr = document.querySelectorAll(".module");
 let currMod;
 // todo: stop the transition when you mouse over btn, then start it up 
 // when you've been off them from > 10 sec
 // add fade to changePic
-// figure out transitionstart
-// write copy for each info module and format
 // add fade to changeModule
 // optimize!
-for (let item of imgArr) {
-	item.addEventListener("transitionend", changeColor);
+
+
+
+for (let item of imgArr) {	
 	item.addEventListener("click", changeModule);
 }
 for (let item of btnArr) {
-	item.addEventListener("mouseover", changePic);
+	item.addEventListener("mouseenter", changePic);
+	item.addEventListener("mouseleave", () => {
+		$('#carousel-outer').carousel('cycle');
+	});
+	item.onmouseover = function () {
+    	overNavBar = true;
+	}
+	item.onmouseout = function () {
+	    overNavBar = false;
+	}
 	item.addEventListener("click", changeModule);
 }
+
+$('#carousel-outer').on('slide.bs.carousel', () => {
+	if  (!overNavBar){
+		currSlide++;
+		if (currSlide > 3) currSlide = 0;
+		changeColor();
+	}
+});
+
 homeBtn.addEventListener("click", () => {
 	currMod.style.display = "none";
 	homeBtn.style.display = "none";
@@ -29,23 +49,15 @@ homeBtn.addEventListener("click", () => {
 })
 
 function changeColor() {
-	for (let i = 0; i < btnArr.length; i++) {
-		if(imgArr[i].classList.contains("active")) {
-			btnArr[i].style.color = "#e1d4c0";
-		} else {
-			btnArr[i].style.color = "rgb(0,0,70)";
-		}
+	btnArr[currSlide].style.color = "#e1d4c0";
+	for (let item of btnArr) {
+		if (btnArr.indexOf(item) != currSlide) item.style.color = "rgb(0,0,70)";
 	}
 }
 function changePic() {
-// 	stop transition
-// 	fade in 
-	for (let i = 0; i < btnArr.length; i++) {
-		if(imgArr[i].classList.contains("active")) {
-			imgArr[i].classList.remove("active");
-		}
-	}
-	imgArr[btnArr.indexOf(this)].classList.add("active");
+	$("#carousel-outer").carousel('pause');
+	currSlide = btnArr.indexOf(this);
+	$("#carousel-outer").carousel(currSlide);
 	changeColor();
 }
 
@@ -58,3 +70,4 @@ function changeModule() {
 	title.style.display = "none"
 	homeBtn.style.display = "inline-block"
 }
+

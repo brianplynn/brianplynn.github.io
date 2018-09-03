@@ -12,7 +12,7 @@ todo: make text on bottom change color when slide transitions
     <header id="title">
       <h1 id="name">BRIAN LYNN</h1>
     </header>
-    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+    <div id="carousel-outer" class="carousel slide carousel-fade" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="d-block w-100" src="images/aboutme.jpg" alt="About Me">
@@ -57,23 +57,149 @@ todo: make text on bottom change color when slide transitions
       <div class="module" id="projects-module">
         <div class="projects-header"><h2>My Projects:</h2></div>
         <div class="project-tile-container">
-          <div class="project-tile">
-              <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642794/d084d718-6171-11e6-83fa-ede5d0a67ad2.png">
+          <button class="modal-btn" type="button" data-toggle="modal" data-target="#project-modal-one">
+              <div class="project-title"><h3>Sample Project</h3></div>
+                <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642794/d084d718-6171-11e6-83fa-ede5d0a67ad2.png">
+          </button>
+          <div class="modal fade" id="project-modal-one" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Sample project title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                  <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary modal-github-button">View on github</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>    
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="project-tile">
-              <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642771/7cd6a0c4-6171-11e6-87fb-915f6084d104.png">
+          <button class="modal-btn" type="button" data-toggle="modal" data-target="#project-modal-one">
+              <div class="project-title"><h3>Sample Project</h3></div>
+                <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642771/7cd6a0c4-6171-11e6-87fb-915f6084d104.png">
+          </button>
+          <div class="modal fade" id="project-modal-one" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Sample project title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                  <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary modal-github-button">View on github</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>    
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="project-tile">
-              <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642772/7d02406c-6171-11e6-8c79-40a2933163dc.png">
+          <button class="modal-btn" type="button" data-toggle="modal" data-target="#project-modal-one">
+              <div class="project-title"><h3>Sample Project</h3></div>
+                <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642772/7d02406c-6171-11e6-8c79-40a2933163dc.png">
+          </button>
+          <div class="modal fade" id="project-modal-one" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Sample project title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                  <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary modal-github-button">View on github</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>    
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="project-tile">
-              <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642773/7d08cb94-6171-11e6-8c45-22e7cf64683e.png">
+          <button class="modal-btn" type="button" data-toggle="modal" data-target="#project-modal-one">
+              <div class="project-title"><h3>Sample Project</h3></div>
+                <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642773/7d08cb94-6171-11e6-8c45-22e7cf64683e.png">
+          </button>
+          <div class="modal fade" id="project-modal-one" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Sample project title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                  <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary modal-github-button">View on github</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>    
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="project-tile">
-              <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642774/7d091806-6171-11e6-8d47-ecf2f2833fe2.png">
+          <button class="modal-btn" type="button" data-toggle="modal" data-target="#project-modal-one">
+              <div class="project-title"><h3>Sample Project</h3></div>
+                <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642774/7d091806-6171-11e6-8d47-ecf2f2833fe2.png">
+          </button>
+          <div class="modal fade" id="project-modal-one" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Sample project title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                  <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary modal-github-button">View on github</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>    
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="project-tile">
-              <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642775/7d354304-6171-11e6-8b56-66eee4681d88.png">
+          <button class="modal-btn" type="button" data-toggle="modal" data-target="#project-modal-one">
+              <div class="project-title"><h3>Sample Project</h3></div>
+                <img class="project-image" src="https://cloud.githubusercontent.com/assets/15967809/17642775/7d354304-6171-11e6-8b56-66eee4681d88.png">
+          </button>
+          <div class="modal fade" id="project-modal-one" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Sample project title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                  <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary modal-github-button">View on github</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>    
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
