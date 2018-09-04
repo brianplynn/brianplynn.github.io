@@ -53,7 +53,7 @@ homeBtn.addEventListener("click", () => {
 function changeColor() {
 	btnArr[currSlide].style.color = "#c6bba9";
 	for (let item of btnArr) {
-		if (btnArr.indexOf(item) != currSlide) item.style.color = "rgb(0,0,70)";
+		if (btnArr.indexOf(item) != currSlide) item.style.color = "black";
 	}
 }
 function changePic() {
@@ -99,7 +99,7 @@ function animateProjects() {
 		document.querySelector(".projects-header").classList.add("typewriter");
 		let delay = 1.25;
 		for (let item of Array.from(document.querySelectorAll(".modal-btn"))) {
-			item.classList.add("fade-in-proj");
+			item.classList.add("fade-in-mod");
 			item.style.animationDelay = `${delay}s`;
 			delay += .5;
 			item.addEventListener("animationend", () => {
@@ -110,7 +110,7 @@ function animateProjects() {
 	} else if (projectsAnimated && document.querySelector(".projects-header").classList.contains("typewriter")) {
 		document.querySelector(".projects-header").classList.remove("typewriter");
 		for (let item of Array.from(document.querySelectorAll(".modal-btn"))) {
-			item.classList.remove("fade-in-proj");
+			item.classList.remove("fade-in-mod");
 		}
 		currMod.classList.add("fade-in");
 	} else {
@@ -119,9 +119,60 @@ function animateProjects() {
 }
 
 function animateSocial() {
-	currMod.classList.add("fade-in");
+	if (!socialAnimated) {
+		document.querySelector(".social-header").classList.add("typewriter");
+		let delay = 1.5;
+		for (let item of Array.from(document.querySelectorAll(".social-btn"))) {
+			item.classList.add("fade-in-mod");
+			item.style.animationDelay = `${delay}s`;
+			delay += .5;
+			item.addEventListener("animationstart", () => {
+				item.style.opacity = "1";
+			});
+		}
+		socialAnimated = true;
+	} else if (socialAnimated && document.querySelector(".social-header").classList.contains("typewriter")) {
+		document.querySelector(".social-header").classList.remove("typewriter");
+		for (let item of Array.from(document.querySelectorAll(".social-btn"))) {
+			item.classList.remove("fade-in-mod");
+		}
+		currMod.classList.add("fade-in");
+	} else {
+		currMod.classList.add("fade-in");
+	}
 }
 
-function animateContacts() {
-	currMod.classList.add("fade-in");
+function animateContact() {
+	let lineOne = document.querySelector(".contact-header .line-one");
+	let lineTwo = document.querySelector(".contact-header .line-two");
+	if (!contactAnimated) {
+		lineOne.classList.add("typewriter");
+		lineOne.style.animationDuration = "2.25s";
+		let delay = 2.25;
+		lineTwo.classList.add("typewriter");
+		lineTwo.style.animationDuration = "2.25s";
+		lineTwo.style.animationDelay = `${delay}s`
+		lineTwo.addEventListener("animationstart", () => {
+				lineTwo.style.opacity = "1";
+			});
+		delay += 1.5;
+		for (let item of Array.from(document.querySelectorAll(".contact-field"))) {
+			item.classList.add("fade-in-mod");
+			item.style.animationDelay = `${delay}s`;
+			delay += .5;
+			item.addEventListener("animationstart", () => {
+				item.style.opacity = "1";
+			});
+		}
+		contactAnimated = true;
+	} else if (contactAnimated && lineOne.classList.contains("typewriter")) {
+		lineOne.classList.remove("typewriter"); 
+		lineTwo.classList.remove("typewriter");
+		for (let item of Array.from(document.querySelectorAll(".contact-field"))) {
+			item.classList.remove("fade-in-mod");
+		}
+		currMod.classList.add("fade-in");
+	} else {
+		currMod.classList.add("fade-in");
+	}
 }

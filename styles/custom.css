@@ -6,7 +6,6 @@ body {
 
 header {
   text-align:center;
-  color: rgb(0,0,70);
   margin-top: 30px;
   margin-bottom: 25px;
 }
@@ -167,6 +166,7 @@ img {
   width: 100%;
   height: 100%;
   margin-top: -200px;
+  transition: opacity 500ms;
 }
 
 .project-image:hover {
@@ -224,7 +224,9 @@ img {
   text-align: center;
   margin-bottom: 20px;
 }
-
+.line-two {
+  opacity: 0;
+}
 form {
   width: 60%;
 }
@@ -248,7 +250,6 @@ form {
 }
 
 .navlink {
-	color: rgb(0,0,70);
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -260,7 +261,6 @@ form {
 
 #home-btn {
   display: none;
-  color: rgb(0,0,70);
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -287,41 +287,23 @@ form {
   animation-duration: 500ms;
 }
 
-@keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .fade-in2 {
   opacity: 1;
-  animation-name: fadeInOpacityTwo;
+  animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 500ms;
 }
 
-@keyframes fadeInOpacityTwo {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.fade-in-proj {
+.fade-in-mod {
   opacity: 0;
-  animation-name: fadeInOpacityProj;
+  animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 1s;
 }
 
-@keyframes fadeInOpacityProj {
+@keyframes fadeInOpacity {
   0% {
     opacity: 0;
   }
