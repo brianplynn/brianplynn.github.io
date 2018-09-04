@@ -35,7 +35,7 @@ img {
   margin-bottom: 50px;
   display: none;
   overflow: scroll;
-  opacity: 0.2;
+  opacity: 1;
   transition: opacity 500ms;
 }
 
@@ -145,7 +145,8 @@ img {
 .modal-btn {
   border: none;
   cursor: pointer;
-  outline: none;
+  outline: none !important;
+  box-shadow: none;
   padding: 0px;
   margin: 0px;
   background-color: #c6bba9;
@@ -253,7 +254,8 @@ form {
   cursor: pointer;
 	margin: 0px 5px;
   font-size: 20px;
-  outline: none;
+  outline: none !important;
+  box-shadow: none;
 }
 
 #home-btn {
@@ -264,7 +266,8 @@ form {
   cursor: pointer;
   margin: 0px 5px;
   font-size: 20px;
-  outline: none;
+  outline: none !important;
+  box-shadow: none;
 }
 
 #home-btn:hover {
@@ -276,7 +279,6 @@ form {
 }
 
 /* Animations */
-
 .fade-in {
   opacity: 1;
   animation-name: fadeInOpacity;
@@ -293,6 +295,7 @@ form {
     opacity: 1;
   }
 }
+
 .fade-in2 {
   opacity: 1;
   animation-name: fadeInOpacityTwo;
@@ -308,5 +311,44 @@ form {
   100% {
     opacity: 1;
   }
+}
+
+.fade-in-proj {
+  opacity: 0;
+  animation-name: fadeInOpacityProj;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+@keyframes fadeInOpacityProj {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
 

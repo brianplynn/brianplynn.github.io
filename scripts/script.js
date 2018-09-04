@@ -9,12 +9,7 @@ navbar.classList.add("fade-in");
 let overNavBar = false;
 let moduleArr = document.querySelectorAll(".module");
 let currMod;
-// todo: stop the transition when you mouse over btn, then start it up 
-// when you've been off them from > 10 sec
-// add fade to changePic
-// add fade to changeModule
-// optimize!
-
+let projectsAnimated, aboutAnimated, socialAnimated, contactAnimated;
 
 
 for (let item of imgArr) {	
@@ -73,13 +68,60 @@ function changeModule() {
 		currMod.style.display = "none";
 		currMod.classList.remove("fade-in");
 	}
-	currMod = moduleArr[Math.max(btnArr.indexOf(this), imgArr.indexOf(this))];
+	let modNum = Math.max(btnArr.indexOf(this), imgArr.indexOf(this))
+	currMod = moduleArr[modNum];
 	// max allows us to get real index, no matter if coming from module or button
 	currMod.style.display = "flex";
-	currMod.classList.add("fade-in");
+	switch (modNum) {
+		case 0:
+			animateAbout();
+			break;
+		case 1:
+			animateProjects();
+			break;
+		case 2:
+			animateSocial();
+			break;
+		case 3:
+			animateContact();
+	}
 	navBar.classList.add("fade-in2");
 	navBar.classList.remove("fade-in");
 	carousel.style.display = "none";
 	title.style.display = "none"
 	homeBtn.style.display = "inline-block"
+}
+function animateAbout() {
+	currMod.classList.add("fade-in");
+}
+function animateProjects() {
+	if (!projectsAnimated) {
+		document.querySelector(".projects-header").classList.add("typewriter");
+		let delay = 1.25;
+		for (let item of Array.from(document.querySelectorAll(".modal-btn"))) {
+			item.classList.add("fade-in-proj");
+			item.style.animationDelay = `${delay}s`;
+			delay += .5;
+			item.addEventListener("animationend", () => {
+				item.style.opacity = "1";
+			});
+		}
+		projectsAnimated = true;
+	} else if (projectsAnimated && document.querySelector(".projects-header").classList.contains("typewriter")) {
+		document.querySelector(".projects-header").classList.remove("typewriter");
+		for (let item of Array.from(document.querySelectorAll(".modal-btn"))) {
+			item.classList.remove("fade-in-proj");
+		}
+		currMod.classList.add("fade-in");
+	} else {
+		currMod.classList.add("fade-in");
+	}
+}
+
+function animateSocial() {
+	currMod.classList.add("fade-in");
+}
+
+function animateContacts() {
+	currMod.classList.add("fade-in");
 }
