@@ -4,6 +4,8 @@ let homeBtn = document.getElementById("home-btn");
 let title = document.getElementById("title");
 let carousel = document.getElementById("carousel-outer");
 let currSlide = 0;
+let navBar = document.getElementById("navbar");
+navbar.classList.add("fade-in");
 let overNavBar = false;
 let moduleArr = document.querySelectorAll(".module");
 let currMod;
@@ -42,14 +44,19 @@ $('#carousel-outer').on('slide.bs.carousel', () => {
 
 homeBtn.addEventListener("click", () => {
 	currMod.style.display = "none";
+	currMod.classList.remove("fade-in");
+	currMod = undefined;
+	navBar.classList.add("fade-in");
+	navBar.classList.remove("fade-in2");
 	homeBtn.style.display = "none";
 	carousel.style.display = "block";
-	title.style.display = "block"
-
+	carousel.classList.add("fade-in");
+	title.style.display = "block";
+	title.classList.add("fade-in");
 })
 
 function changeColor() {
-	btnArr[currSlide].style.color = "#e1d4c0";
+	btnArr[currSlide].style.color = "#c6bba9";
 	for (let item of btnArr) {
 		if (btnArr.indexOf(item) != currSlide) item.style.color = "rgb(0,0,70)";
 	}
@@ -62,12 +69,17 @@ function changePic() {
 }
 
 function changeModule() {
-	if (currMod) currMod.style.display = "none";
+	if (currMod) {
+		currMod.style.display = "none";
+		currMod.classList.remove("fade-in");
+	}
 	currMod = moduleArr[Math.max(btnArr.indexOf(this), imgArr.indexOf(this))];
 	// max allows us to get real index, no matter if coming from module or button
 	currMod.style.display = "flex";
+	currMod.classList.add("fade-in");
+	navBar.classList.add("fade-in2");
+	navBar.classList.remove("fade-in");
 	carousel.style.display = "none";
 	title.style.display = "none"
 	homeBtn.style.display = "inline-block"
 }
-
