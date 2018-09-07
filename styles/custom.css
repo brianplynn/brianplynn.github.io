@@ -235,11 +235,13 @@ form {
   background-color: #e1d4c0;
   border: none;
   color: rgb(0,0,70);
+  outline: none !important;
 }
 
 #contact-submit-btn:hover {
   background-color: #c6bba9;
   color: white;
+  outline: none !important;
 }
 
 
