@@ -97,7 +97,7 @@ img {
     height: 100%;
     background-repeat: no-repeat;
     background-position: 50%;
-    background-image: url("file:///home/chronos/u-64349d8edefe358196ccee8809d0307fdb713e16/Downloads/github-projects/brianplynn.github.io/images/mepic.png");    
+    background-image: url(https://image.ibb.co/bXys79/mepic.png);
     visibility: visible;
     -webkit-transform: rotate(-60deg);
        -moz-transform: rotate(-60deg);
