@@ -38,6 +38,18 @@ img {
   transition: opacity 500ms;
 }
 
+.about-module {
+  flex-wrap: wrap;
+}
+.about-header {
+  text-align: center;
+  width: 100%;
+}
+.about-container {
+  width: 100%;
+  display: flex;
+}
+
 .left-side, .right-side {
   display: flex;
   width: 45%;
@@ -55,6 +67,10 @@ img {
 .about-element {
   text-align: center;
   margin: 15px 10px;
+}
+
+#about-info {
+  margin-top: -25px;
 }
 
 .hexagon {
@@ -97,7 +113,7 @@ img {
 .hexagon2 {
       width: 150px;
       height: 300px;
-      margin-top: -10px;
+      margin-top: -20px;
       margin-left: auto;
       margin-right: auto;
 }
@@ -108,6 +124,33 @@ img {
 
 #about-info {
   font-size: 20px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.logo-tile {
+  margin: 0px 10px;
+}
+
+.right-side img {
+  width: 60px;
+}
+
+.right-side h3 {
+  width: 85%;
+  margin: 30px 7.5%;
+}
+
+#css-tile {
+  margin-left: 17px;
+}
+
+#node-tile img {
+  width: 52.5px;
 }
 
 .progress {

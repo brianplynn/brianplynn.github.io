@@ -92,7 +92,43 @@ function changeModule() {
 	homeBtn.style.display = "inline-block"
 }
 function animateAbout() {
-	currMod.classList.add("fade-in");
+	if (!aboutAnimated) {
+		document.querySelector("about-module")
+		document.querySelector(".about-header").classList.add("typewriter");
+		let delay = 1.25;
+		console.log(Array.from(document.querySelectorAll(".left-element")));
+		console.log(Array.from(document.querySelectorAll(".right-element")));
+		for (let item of Array.from(document.querySelectorAll(".right-element"))) {
+			item.classList.add("fade-in-mod");
+			item.style.animationDelay = `${delay}s`;
+			delay += .25;
+			item.addEventListener("animationend", () => {
+				item.style.opacity = "1";
+			});
+		}
+		delay = 1.3;
+		for (let item of Array.from(document.querySelectorAll(".left-element"))) {
+			item.classList.add("fade-in-mod");
+			item.style.animationDelay = `${delay}s`;
+			delay += .5;
+			item.addEventListener("animationend", () => {
+				item.style.opacity = "1";
+			});
+		}
+		
+		aboutAnimated = true;
+	} else if (aboutAnimated && document.querySelector(".about-header").classList.contains("typewriter")) {
+		document.querySelector(".about-header").classList.remove("typewriter");
+		for (let item of Array.from(document.querySelectorAll(".right-element"))) {
+			item.classList.remove("fade-in-mod");
+		}
+		for (let item of Array.from(document.querySelectorAll(".left-element"))) {
+			item.classList.remove("fade-in-mod");
+		}
+		currMod.classList.add("fade-in");
+	} else {
+		currMod.classList.add("fade-in");
+	}
 }
 function animateProjects() {
 	if (!projectsAnimated) {
