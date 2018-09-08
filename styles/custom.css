@@ -97,17 +97,13 @@ img {
     height: 100%;
     background-repeat: no-repeat;
     background-position: 50%;
-    background-image: url(http://placekitten.com/240/240);
+    background-image: url("file:///home/chronos/u-64349d8edefe358196ccee8809d0307fdb713e16/Downloads/github-projects/brianplynn.github.io/images/mepic.png");    
     visibility: visible;
     -webkit-transform: rotate(-60deg);
        -moz-transform: rotate(-60deg);
         -ms-transform: rotate(-60deg);
          -o-transform: rotate(-60deg);
             transform: rotate(-60deg);
-    }
-
-.hexagon-in2:hover {
-    background-image: url(http://placekitten.com/241/241);
     }
 
 .hexagon2 {
