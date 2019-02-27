@@ -280,8 +280,17 @@ modal-github-button:focus {
 
 #freelance-module {
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+}
+
+.freelance-header {
+  text-align: center;
+}
+.freelance-tile-container {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .freelance-header {
@@ -289,14 +298,39 @@ modal-github-button:focus {
   text-align: center;
   margin-bottom: 20px;
 }
-.line-two {
+
+.freelance-modal-btn {
+  border: none;
+  cursor: pointer;
+  outline: none !important;
+  box-shadow: none;
+  padding: 0px;
+  margin: 0px;
+  background-color: #c6bba9;
+  width: 428.5px;
+  height: 300px;
+  margin: 30px 5px;
+}
+
+.freelance-title {
+  width: 100%;
+  height: 175px;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  color: white;
+}
+.freelance-image {
+  width: 100%;
+  height: 100%;
+  margin-top: -175px;
+  transition: opacity 500ms;
+}
+
+.freelance-image:hover {
   opacity: 0;
 }
-form {
-  width: 60%;
-}
-
-
 
 #navbar {
   display: flex;

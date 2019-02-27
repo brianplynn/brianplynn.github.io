@@ -9,7 +9,7 @@ navbar.classList.add("fade-in");
 let overNavBar = false;
 let moduleArr = document.querySelectorAll(".module");
 let currMod;
-let projectsAnimated, aboutAnimated, socialAnimated, contactAnimated;
+let freelanceAnimated, aboutAnimated, socialAnimated, projectsAnimated;
 
 
 for (let item of imgArr) {	
@@ -177,33 +177,22 @@ function animateSocial() {
 	}
 }
 
-function animateContact() {
-	let lineOne = document.querySelector(".contact-header .line-one");
-	let lineTwo = document.querySelector(".contact-header .line-two");
-	if (!contactAnimated) {
-		lineOne.classList.add("typewriter");
-		lineOne.style.animationDuration = "2.25s";
-		let delay = 2.25;
-		lineTwo.classList.add("typewriter");
-		lineTwo.style.animationDuration = "2.25s";
-		lineTwo.style.animationDelay = `${delay}s`
-		lineTwo.addEventListener("animationstart", () => {
-				lineTwo.style.opacity = "1";
-			});
-		delay += 1.5;
-		for (let item of Array.from(document.querySelectorAll(".contact-field"))) {
+function animateFreelance() {
+	if (!freelanceAnimated) {
+		document.querySelector(".freelance-header").classList.add("typewriter");
+		let delay = 1.25;
+		for (let item of Array.from(document.querySelectorAll(".freelance-modal-btn"))) {
 			item.classList.add("fade-in-mod");
 			item.style.animationDelay = `${delay}s`;
 			delay += .5;
-			item.addEventListener("animationstart", () => {
+			item.addEventListener("animationend", () => {
 				item.style.opacity = "1";
 			});
 		}
-		contactAnimated = true;
-	} else if (contactAnimated && lineOne.classList.contains("typewriter")) {
-		lineOne.classList.remove("typewriter"); 
-		lineTwo.classList.remove("typewriter");
-		for (let item of Array.from(document.querySelectorAll(".contact-field"))) {
+		freelanceAnimated = true;
+	} else if (freelanceAnimated && document.querySelector(".freelance-header").classList.contains("typewriter")) {
+		document.querySelector(".freelance-header").classList.remove("typewriter");
+		for (let item of Array.from(document.querySelectorAll(".freelance-modal-btn"))) {
 			item.classList.remove("fade-in-mod");
 		}
 		currMod.classList.add("fade-in");
