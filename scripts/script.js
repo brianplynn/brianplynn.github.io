@@ -80,10 +80,10 @@ function changeModule() {
 			animateProjects();
 			break;
 		case 2:
-			animateSocial();
+			animateFreelance();
 			break;
 		case 3:
-			animateContact();
+			animateSocial();
 	}
 	navBar.classList.add("fade-in2");
 	navBar.classList.remove("fade-in");
@@ -91,13 +91,12 @@ function changeModule() {
 	title.style.display = "none"
 	homeBtn.style.display = "inline-block"
 }
+
 function animateAbout() {
 	if (!aboutAnimated) {
 		document.querySelector("about-module")
 		document.querySelector(".about-header").classList.add("typewriter");
 		let delay = 1.25;
-		console.log(Array.from(document.querySelectorAll(".left-element")));
-		console.log(Array.from(document.querySelectorAll(".right-element")));
 		for (let item of Array.from(document.querySelectorAll(".right-element"))) {
 			item.classList.add("fade-in-mod");
 			item.style.animationDelay = `${delay}s`;

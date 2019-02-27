@@ -4,6 +4,9 @@ body {
   font-family: 'Cutive Mono', monospace;
 }
 
+#container-all {
+}
+
 header {
   text-align:center;
   margin-top: 30px;
@@ -33,7 +36,7 @@ img {
   margin-top: 50px;
   margin-bottom: 50px;
   display: none;
-  overflow: scroll;
+  overflow: visible;
   opacity: 1;
   transition: opacity 500ms;
 }
@@ -132,6 +135,14 @@ img {
   margin: 0px 10px;
 }
 
+#css-tile {
+  margin: 0px 15px 0px 20px;
+}
+
+.react-tile {
+  margin: 0px 20px;
+}
+
 .right-side img {
   width: 60px;
 }
@@ -140,33 +151,40 @@ img {
   width: 85%;
   margin: 30px 7.5%;
 }
-
-#css-tile {
-  margin-left: 17px;
+.logo-container {
+  margin-top: 30px;
 }
 
-#node-tile img {
-  width: 52.5px;
+.bottom-tile {
+  width: 97px;
 }
 
-.progress {
-  height: 45px;
-  margin: 5px;
-  width: 90%;
-  border: 1px solid black;
+.bottom-img {
+  width: 60px;
 }
 
-.progress-bar {
-  text-align: left;
-  background-color: #e1d4c0;
-  font-size: 15px;
+#node-img {
+  width: 55px;
 }
 
-.progress-bar-text {
-  font-size: 20px;
-  margin-left: 5px;
-  color: black;
+#postgres-img {
+  width: 58px;
+}
 
+.express-label {
+  margin-top: 4px;
+}
+
+.node-label {
+  margin-top: .89px;
+}
+
+.postgres-label {
+  margin-top: 3.47px;
+}
+
+.rest-label {
+  margin-top: 4px;
 }
 
 #projects-module {
@@ -176,6 +194,7 @@ img {
   text-align: center;
 }
 .project-tile-container {
+  margin-top: 70px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -188,8 +207,8 @@ img {
   padding: 0px;
   margin: 0px;
   background-color: #c6bba9;
-  width: 250px;
-  height: 175px;
+  width: 428.5px;
+  height: 300px;
   margin: 30px 5px;
 }
 
@@ -199,12 +218,13 @@ img {
   display: flex; 
   align-items: center;
   justify-content: center;
+  padding-top: 50px;
   color: white;
 }
 .project-image {
   width: 100%;
   height: 100%;
-  margin-top: -200px;
+  margin-top: -175px;
   transition: opacity 500ms;
 }
 
@@ -217,9 +237,15 @@ img {
   border: none;
   color: rgb(0,0,70);
 }
+
 .modal-github-button:hover {
   background-color: #c6bba9;
 }
+
+modal-github-button:focus {
+  outline:0 !important;
+}
+
 #social-module {
   flex-direction: column;
   justify-content: center;
@@ -252,13 +278,13 @@ img {
   width: 75px;
 }
 
-#contact-module {
+#freelance-module {
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.contact-header {
+.freelance-header {
   width: 60%;
   text-align: center;
   margin-bottom: 20px;
@@ -270,18 +296,6 @@ form {
   width: 60%;
 }
 
-#contact-submit-btn {
-  background-color: #e1d4c0;
-  border: none;
-  color: rgb(0,0,70);
-  outline: none !important;
-}
-
-#contact-submit-btn:hover {
-  background-color: #c6bba9;
-  color: white;
-  outline: none !important;
-}
 
 
 #navbar {
