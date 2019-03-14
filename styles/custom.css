@@ -4,9 +4,6 @@ body {
   font-family: 'Cutive Mono', monospace;
 }
 
-#container-all {
-}
-
 header {
   text-align:center;
   margin-top: 30px;
@@ -18,9 +15,8 @@ img {
 }
 
 .carousel-inner {
-  width: 95%;
+  width: 50%;
   height: auto;
-	max-width: 1000px;
 	max-height: auto;
 	margin: auto;
   cursor: pointer;
@@ -287,7 +283,7 @@ modal-github-button:focus {
   text-align: center;
 }
 .freelance-tile-container {
-  margin-top: 70px;
+  margin-top: 50px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -421,5 +417,32 @@ modal-github-button:focus {
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange; }
+}
+
+@media  (max-height: 800px) {
+  #title {
+    margin-top: 10px;
+  }
+  .module {
+    margin-top: 10px;
+    height: 80vh;
+  }
+  .about-module {
+    overflow-y: scroll;
+  }
+
+  .projects-module {
+    overflow-y: scroll;
+  }
+
+  .project-tile-container {
+    margin-top: 20px;
+    max-height: 70vh;
+    overflow-y: scroll;
+  }
+
+  .freelance-tile-container {
+    margin-top: 20px
+  }
 }
 
