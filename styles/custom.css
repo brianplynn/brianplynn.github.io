@@ -421,6 +421,9 @@ modal-github-button:focus {
 }
 
 @media  (max-height: 800px) {
+  .carousel-inner {
+    width: 50%;
+  }
   #title {
     margin-top: 10px;
   }
