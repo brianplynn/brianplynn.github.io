@@ -449,4 +449,9 @@ modal-github-button:focus {
     margin-top: 20px
   }
 }
-
+@media (max-width: 810px) {
+  #name {
+    color: red;
+    
+  }
+}
