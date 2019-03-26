@@ -502,8 +502,8 @@ modal-github-button:focus {
   }
 
   .module {
-    height: 83vh;
-    max-height: 83vh;
+    height: 78vh;
+    max-height: 78vh;
     margin-bottom: 2vh;
   }
   .about-module {
@@ -601,6 +601,11 @@ modal-github-button:focus {
 
   #navbar {
     margin-top: 0px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .navlink {
