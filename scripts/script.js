@@ -1,6 +1,5 @@
 let imgArr = Array.from(document.querySelectorAll(".carousel-item"));
 let btnArr = Array.from(document.querySelectorAll(".navlink"));
-let subNavArr = Array.from(document.querySelectorAll(".subnav"));
 let homeBtn = document.getElementById("home-btn");
 let title = document.getElementById("title");
 let carousel = document.getElementById("carousel-outer");
@@ -49,9 +48,6 @@ homeBtn.addEventListener("click", () => {
 	carousel.classList.add("fade-in");
 	title.style.display = "block";
 	title.classList.add("fade-in");
-	for (let item of subNavArr) {
-		item.classList.remove(".subnav-flex");
-	}
 })
 
 function changeColor() {
@@ -96,11 +92,7 @@ function changeModule() {
 	navBar.classList.remove("fade-in");
 	carousel.style.display = "none";
 	title.style.display = "none"
-	homeBtn.style.display = "inline-block"
-	for (let item of subNavArr) {
-		if (!item.classList.contains(".subnav-flex"))
-		item.classList.add(".subnav-flex");
-	}
+	homeBtn.style.display = "inline-block";
 }
 
 function animateAbout() {
