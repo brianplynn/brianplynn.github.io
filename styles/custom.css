@@ -620,7 +620,7 @@ modal-github-button:focus {
 
   .navlink {
     font-size: 36px;
-    margin: 0;
+    margin: 0px 1px 4px 1px;
   }
 
   #home-btn {

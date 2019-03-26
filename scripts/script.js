@@ -61,9 +61,6 @@ function changePic() {
 	currSlide = btnArr.indexOf(this);
 	$("#carousel-outer").carousel(currSlide);
 	changeColor();
-	for (let item of subNavArr) {
-		item.classList.add(".subnav-flex");
-	}
 }
 
 function changeModule() {
@@ -96,8 +93,6 @@ function changeModule() {
 }
 
 function animateAbout() {
-	console.log(window.innerWidth);
-	console.log($(window).width());
 	if (!aboutAnimated && $(window).width() > 981) {
 		document.querySelector("about-module")
 		document.querySelector(".about-header").classList.add("typewriter");
