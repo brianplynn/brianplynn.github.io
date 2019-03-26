@@ -449,9 +449,40 @@ modal-github-button:focus {
     margin-top: 20px
   }
 }
-@media (max-width: 810px) {
+
+
+@media (min-width: 320px) and (max-width: 1024px) {
   #name {
-    color: red;
-    
+    margin-top: 5vh;
+    font-size: 70px;
+  }
+  #carousel-outer {
+    margin-top: 10vh;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .carousel-item {
+    width: 750px;
+    height: 750px;
+    overflow: hidden;
+  }
+  .carousel-item img {
+    display: none !important;
+  }
+  .about-me-img {
+    background-image: url('../images/aboutme-mobile.jpg');
+    background-size: 100%;
+  }
+  .projects-img {
+    background-image: url('../images/projects-mobile.jpeg');
+    background-size: 100%;
+  }
+  .freelance-img {
+    background-image: url('../images/freelance-mobile.jpg');
+    background-size: 100%;
+  }
+  .social-img {
+    background-image: url('../images/social-mobile.jpg');
+    background-size: 100%;
   }
 }
