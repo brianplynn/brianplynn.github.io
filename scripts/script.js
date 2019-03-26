@@ -94,7 +94,8 @@ function changeModule() {
 
 function animateAbout() {
 	console.log(window.innerWidth);
-	if (!aboutAnimated && window.innerWidth > 981) {
+	console.log($(window).width());
+	if (!aboutAnimated && $(window).width() > 981) {
 		document.querySelector("about-module")
 		document.querySelector(".about-header").classList.add("typewriter");
 		let delay = 1.25;
@@ -117,7 +118,7 @@ function animateAbout() {
 		}
 		
 		aboutAnimated = true;
-	} else if (aboutAnimated && window.innerWidth > 981 &&  document.querySelector(".about-header").classList.contains("typewriter")) {
+	} else if (aboutAnimated && $(window).width() > 981 &&  document.querySelector(".about-header").classList.contains("typewriter")) {
 		document.querySelector(".about-header").classList.remove("typewriter");
 		for (let item of Array.from(document.querySelectorAll(".right-element"))) {
 			item.classList.remove("fade-in-mod");
@@ -131,7 +132,7 @@ function animateAbout() {
 	}
 }
 function animateProjects() {
-	if (!projectsAnimated && window.innerWidth > 981) {
+	if (!projectsAnimated && $(window).width() > 981) {
 		document.querySelector(".projects-header").classList.add("typewriter");
 		let delay = 1.25;
 		for (let item of Array.from(document.querySelectorAll(".modal-btn"))) {
@@ -143,7 +144,7 @@ function animateProjects() {
 			});
 		}
 		projectsAnimated = true;
-	} else if (projectsAnimated && window.innerWidth > 981 && document.querySelector(".projects-header").classList.contains("typewriter")) {
+	} else if (projectsAnimated && $(window).width() > 981 && document.querySelector(".projects-header").classList.contains("typewriter")) {
 		document.querySelector(".projects-header").classList.remove("typewriter");
 		for (let item of Array.from(document.querySelectorAll(".modal-btn"))) {
 			item.classList.remove("fade-in-mod");
@@ -155,7 +156,7 @@ function animateProjects() {
 }
 
 function animateSocial() {
-	if (!socialAnimated && window.innerWidth > 981) {
+	if (!socialAnimated && $(window).width() > 981) {
 		document.querySelector(".social-header").classList.add("typewriter");
 		let delay = 1.5;
 		for (let item of Array.from(document.querySelectorAll(".social-btn"))) {
@@ -167,7 +168,7 @@ function animateSocial() {
 			});
 		}
 		socialAnimated = true;
-	} else if (socialAnimated && window.innerWidth > 981 && document.querySelector(".social-header").classList.contains("typewriter")) {
+	} else if (socialAnimated && $(window).width()> 981 && document.querySelector(".social-header").classList.contains("typewriter")) {
 		document.querySelector(".social-header").classList.remove("typewriter");
 		for (let item of Array.from(document.querySelectorAll(".social-btn"))) {
 			item.classList.remove("fade-in-mod");
@@ -179,7 +180,7 @@ function animateSocial() {
 }
 
 function animateFreelance() {
-	if (!freelanceAnimated && window.innerWidth > 981) {
+	if (!freelanceAnimated && $(window).width() > 981) {
 		document.querySelector(".freelance-header").classList.add("typewriter");
 		let delay = 1.25;
 		for (let item of Array.from(document.querySelectorAll(".freelance-modal-btn"))) {
@@ -191,7 +192,7 @@ function animateFreelance() {
 			});
 		}
 		freelanceAnimated = true;
-	} else if (freelanceAnimated && window.innerWidth > 981 && document.querySelector(".freelance-header").classList.contains("typewriter")) {
+	} else if (freelanceAnimated && $(window).width() > 981 && document.querySelector(".freelance-header").classList.contains("typewriter")) {
 		document.querySelector(".freelance-header").classList.remove("typewriter");
 		for (let item of Array.from(document.querySelectorAll(".freelance-modal-btn"))) {
 			item.classList.remove("fade-in-mod");

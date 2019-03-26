@@ -450,6 +450,9 @@ modal-github-button:focus {
   }
 }
 
+.logo-container-mobile {
+  display: none;
+}
 
 @media (min-width: 320px) and (max-width: 980px) {
   #name {
@@ -470,6 +473,7 @@ modal-github-button:focus {
     margin-top: 10vh;
     margin-left: 10%;
     margin-right: 10%;
+    margin-bottom: 10vh;
   }
   .carousel-item {
     width: 750px;
@@ -479,6 +483,7 @@ modal-github-button:focus {
   .carousel-item img {
     display: none !important;
   }
+
   .about-me-img {
     background-image: url('../images/aboutme-mobile.jpg');
     background-size: 100%;
@@ -498,20 +503,20 @@ modal-github-button:focus {
 
   .navlink {
     font-size: 36px;
-    margin-top: 10vh;
   }
 
   #home-btn {
     font-size: 36px;
-    margin-top: 10vh;
   }
 
   .module {
-    height: 75vh;
-    max-height: 75vh;
+    height: 83vh;
+    max-height: 83vh;
+    margin-bottom: 2vh;
   }
   .about-module {
     flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
   }
@@ -522,6 +527,7 @@ modal-github-button:focus {
 
   .about-container {
     flex-direction: column;
+    justify-content: space-between;
     overflow-y: scroll;
   }
 
@@ -529,10 +535,15 @@ modal-github-button:focus {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 5vh;
+  }
+  .hexagon {
+    display: none;
   }
   .right-side h3 {
     font-size: 50px;
   }
+
   .logo-container {
     display: none;
   }
@@ -542,17 +553,23 @@ modal-github-button:focus {
     grid-template-columns: 33.33% 33.34% 33.33%;
   }
   .logo-tile-mobile {
-    width: 120px;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
   }
   .logo-img-mobile {
-    width: 100%;
-    height: 130px;
+    margin: auto;
+    width: 90px;
+    height: 95px;
   }
   .logo-tile-mobile img {
     width: 100%;
   }
   .logo-tile-mobile p {
+    margin-top: 2px;
+    width: 100%;
     font-size: 30px;
+    text-align: center;
   }
   .project-tile-container {
     margin-top: 10vh;
@@ -586,4 +603,11 @@ modal-github-button:focus {
     font-size: 30px;
   }
 
+  .social-btn {
+    width: 90px;
+  }
+
+  #navbar {
+    margin-top: 0px;
+  }
 }
