@@ -457,12 +457,12 @@ modal-github-button:focus {
 @media (min-width: 320px) and (max-width: 980px) {
   #name {
     margin-top: 5vh;
-    font-size: 70px;
+    font-size: 6rem;
   }
 
   h2 {
     margin-top: 5vh;
-    font-size: 70px;
+    font-size: 4.5rem;
   }
 
   .freelance-header {
@@ -470,7 +470,7 @@ modal-github-button:focus {
   }
 
   #carousel-outer {
-    margin-top: 10vh;
+    margin-top: 8vh;
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 10vh;
@@ -514,7 +514,7 @@ modal-github-button:focus {
   }
 
   #about-info {
-    font-size: 30px;
+    font-size: 2rem;
   }
 
   .about-container {
@@ -533,7 +533,7 @@ modal-github-button:focus {
     display: none;
   }
   .right-side h3 {
-    font-size: 50px;
+    font-size: 3rem;
   }
 
   .logo-container {
@@ -551,25 +551,25 @@ modal-github-button:focus {
   }
   .logo-img-mobile {
     margin: auto;
-    width: 90px;
-    height: 95px;
+    width: 40%;
+    height: auto;
   }
   .logo-tile-mobile img {
     width: 100%;
   }
   .logo-tile-mobile p {
-    margin-top: 2px;
+    margin-top: .1rem;
     width: 100%;
-    font-size: 30px;
+    font-size: 2rem;
     text-align: center;
   }
   .project-tile-container {
-    margin-top: 10vh;
+    margin-top: 6vh;
     overflow-y: scroll;
   }
 
   .freelance-tile-container {
-    margin-top: 10vh;
+    margin-top: 6vh;
     overflow-y: scroll;
   }
 
@@ -584,15 +584,15 @@ modal-github-button:focus {
   }
 
   .modal-header h5 {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 
   .modal-body {
-    font-size: 30px;
+    font-size: 2rem;
   }
 
   .modal-footer .btn {
-    font-size: 30px;
+    font-size: 2rem;
   }
 
   .social-btn {
@@ -619,12 +619,13 @@ modal-github-button:focus {
   }
 
   .navlink {
-    font-size: 36px;
+    font-size: 2.3rem;
     margin: 0px 1px 4px 1px;
   }
 
   #home-btn {
-    font-size: 36px;
+    font-size: 2.3rem;
+    margin: 0px 1px 4px 1px;
   }
 
 }
