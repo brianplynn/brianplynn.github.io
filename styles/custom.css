@@ -501,14 +501,6 @@ modal-github-button:focus {
     background-size: 100%;
   }
 
-  .navlink {
-    font-size: 36px;
-  }
-
-  #home-btn {
-    font-size: 36px;
-  }
-
   .module {
     height: 83vh;
     max-height: 83vh;
@@ -547,8 +539,8 @@ modal-github-button:focus {
   .logo-container {
     display: none;
   }
+
   .logo-container-mobile {
-    width: 90%;
     display: grid;
     grid-template-columns: 33.33% 33.34% 33.33%;
   }
@@ -610,4 +602,14 @@ modal-github-button:focus {
   #navbar {
     margin-top: 0px;
   }
+
+  .navlink {
+    font-size: 36px;
+    margin: 0;
+  }
+
+  #home-btn {
+    font-size: 36px;
+  }
+
 }
