@@ -451,11 +451,21 @@ modal-github-button:focus {
 }
 
 
-@media (min-width: 320px) and (max-width: 1024px) {
+@media (min-width: 320px) and (max-width: 980px) {
   #name {
     margin-top: 5vh;
     font-size: 70px;
   }
+
+  h2 {
+    margin-top: 5vh;
+    font-size: 70px;
+  }
+
+  .freelance-header {
+    width: 100%;
+  }
+
   #carousel-outer {
     margin-top: 10vh;
     margin-left: 10%;
@@ -485,4 +495,95 @@ modal-github-button:focus {
     background-image: url('../images/social-mobile.jpg');
     background-size: 100%;
   }
+
+  .navlink {
+    font-size: 36px;
+    margin-top: 10vh;
+  }
+
+  #home-btn {
+    font-size: 36px;
+    margin-top: 10vh;
+  }
+
+  .module {
+    height: 75vh;
+    max-height: 75vh;
+  }
+  .about-module {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #about-info {
+    font-size: 30px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+
+  .left-side, .right-side {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .right-side h3 {
+    font-size: 50px;
+  }
+  .logo-container {
+    display: none;
+  }
+  .logo-container-mobile {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 33.33% 33.34% 33.33%;
+  }
+  .logo-tile-mobile {
+    width: 120px;
+  }
+  .logo-img-mobile {
+    width: 100%;
+    height: 130px;
+  }
+  .logo-tile-mobile img {
+    width: 100%;
+  }
+  .logo-tile-mobile p {
+    font-size: 30px;
+  }
+  .project-tile-container {
+    margin-top: 10vh;
+    overflow-y: scroll;
+  }
+
+  .freelance-tile-container {
+    margin-top: 10vh;
+    overflow-y: scroll;
+  }
+
+  .modal-btn, .freelance-modal-btn {
+    width: 60%;
+    height: auto;
+  }
+
+  .modal-dialog {
+    width: 70%;
+    max-width: none;
+  }
+
+  .modal-header h5 {
+    font-size: 40px;
+  }
+
+  .modal-body {
+    font-size: 30px;
+  }
+
+  .modal-footer .btn {
+    font-size: 30px;
+  }
+
 }
