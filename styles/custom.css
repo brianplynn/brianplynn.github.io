@@ -599,11 +599,15 @@ modal-github-button:focus {
     width: 90px;
   }
 
+  .small {
+    width: 115px;
+  }
+
   #navbar {
     margin-top: 0px;
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 80%;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    width: 85%;
     flex-wrap: wrap;
     justify-content: center;
     padding-bottom: 10vh;
