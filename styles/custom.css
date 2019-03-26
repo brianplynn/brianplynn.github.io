@@ -606,10 +606,10 @@ modal-github-button:focus {
     width: 80%;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 10vh;
+    padding-bottom: 10vh;
   }
 
-  .subnav {
+  .subnav-flex {
     display: flex;
     flex-wrap: nowrap;
   }
