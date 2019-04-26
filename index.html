@@ -1,87 +1,150 @@
-<!-- TODO:
-
-- fix slideshow bug where it can't handle large amts of mouseovers
-- optimize for mobile
--->
-
 <!DOCTYPE html>
-<html>
-<head>
-  <link rel="shortcut icon" href="images/favicon.ico" />
-  <title>Brian Lynn - Web Developer</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="styles/custom.css">
-  <script src="https://code.iconify.design/1/1.0.0-rc7/iconify.min.js"></script>
-</head>
-  <body>
-    <div id = "container-all">
-    <header id="title">
-      <h1 id="name">BRIAN LYNN</h1>
-    </header>
-    <div id="carousel-outer" class="carousel slide carousel-fade" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active about-me-img">
-          <img class="d-block w-100" src="images/aboutme.jpg" alt="About Me">
-        </div>
-        <div class="carousel-item projects-img">
-          <img class="d-block w-100" src="images/projects.jpg" alt="My Projects">
-        </div>
-        <div class="carousel-item freelance-img">
-          <img class="d-block w-100" src="images/freelance.jpg" alt="Freelance">
-        </div>
-        <div class="carousel-item social-img">
-          <img class="d-block w-100" src="images/social.jpg" alt="Contact">
-        </div>
-      </div>
-    </div>
-    <div class="module-container">
-      <div class="module about-module">
-        <h2 class = "about-header">About Me:</h2>
-        <div class = "about-container">
-          <div class="left-side">
-            <div class="hexagon hexagon2 left-element"><div class="hexagon-in1"><div class="hexagon-in2"></div></div></div>
-            <p class = "about-element left-element" id="about-info">After graduating with a B.A. in Economics from Occidental College in 2018, I decided to capitalize on my passion for computer science and creative design by teaching myself web development. Now, I'm using my newfound skills to create fast, responsive, and dynamic web applications.</p>
-          </div>
-          <div class="right-side">
-            <h3 class="about-element right-element">What I know:</h3>
-            <div class="logo-container right-element">
-              <div class="logo-tile"><img src="images/html.png"><p>HTML</p></div>
-              <div class="logo-tile" id="css-tile"><img src="images/css.png"><p>CSS</p></div>
-              <div class="logo-tile"><img src="images/javascript.png"><p>Javascript</p></div>
-              <div class="logo-tile react-tile"><img src="images/reactjs.png"><p>React</p></div>
-              <div class="logo-tile"><span class="iconify" data-icon="simple-icons:redux" data-inline="false" data-width="56px" data-height="56px" style="margin-bottom: 4px;"></span><p>Redux</p></div>
-            </div>
-            <div class="logo-container right-element">
-              <div class="logo-tile bottom-tile" ><img id="node-img" src="images/nodejs.png"><p class="node-label">Node</p></div>
-              <div class="logo-tile bottom-tile"><img class="bottom-img" src="images/expressjs.png"><p class="express-label">Express</p></div>
-              <div class="logo-tile bottom-tile"><img id="postgres-img" src="images/postgresql.png"><p class="postgres-label">PostgreSQL</p></div>
-              <div class="logo-tile bottom-tile"><img class="bottom-img" src="images/restful.png"><p class="rest-label">RESTful APIs</p></div>
-            </div>
+<html lang="en">
+	<head>
+		<link rel="shortcut icon" href="images/favicon.ico" />
+ 	    <title>Brian Lynn - Web Developer</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="UTF-8" />
 
+		<!-- Font -->
 
+		<link
+			href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700%7CAllura"
+			rel="stylesheet"
+		/>
 
-            <div class="logo-container-mobile right-element">
-              <div class="logo-tile-mobile"><div class="logo-img-mobile"><img src="images/html.png"></div><p>HTML</p></div>
-              <div class="logo-tile-mobile"><div class="logo-img-mobile"><img src="images/css.png"></div><p>CSS</p></div>
-              <div class="logo-tile-mobile"><div class="logo-img-mobile"><img src="images/javascript.png"></div><p>Javascript</p></div>
-              <div class="logo-tile-mobile"><div class="logo-img-mobile"><img src="images/reactjs.png"></div><p>React</p></div>
-              <div class="logo-tile-mobile"><div class="logo-img-mobile"><span class="iconify" data-icon="simple-icons:redux" data-inline="false" data-width="90px" data-height="90px" style="margin-bottom: 4px;"></span></div><p>Redux</p></div>
-              <div class="logo-tile-mobile"><div class="logo-img-mobile"><img src="images/nodejs.png"></div><p>Node</p></div>
-              <div class="logo-tile-mobile"><div class="logo-img-mobile"><img src="images/expressjs.png"></div><p>Express</p></div>
-              <div class="logo-tile-mobile"><div class="logo-img-mobile"><img src="images/postgresql.png"></div><p>PostgreSQL</p></div>
-              <div class="logo-tile-mobile"><div class="logo-img-mobile"><img src="images/restful.png"></div><p>RESTful APIs</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="module" id="projects-module">
-        <div class="projects-header"><h2>Personal Projects:</h2></div>
-        <div class="project-tile-container">
-          <button class="modal-btn" type="button" data-toggle="modal" data-target="#project-modal-one">
-              <div class="project-title"><h3>Wellness Tracker</h3></div>
-                <img class="project-image" src="images/wellness-tracker.png">
-          </button>
-          <div class="modal fade" id="project-modal-one" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+		<!-- Stylesheets -->
+
+		<link href="common-css/bootstrap.css" rel="stylesheet" />
+
+		<link href="common-css/ionicons.css" rel="stylesheet" />
+
+		<link href="common-css/fluidbox.min.css" rel="stylesheet" />
+
+		<link href="01-cv-portfolio/css/styles.css" rel="stylesheet" />
+
+		<link href="01-cv-portfolio/css/responsive.css" rel="stylesheet" />
+	</head>
+	<body>		
+		<section class="intro-section">
+			<div class="container margin-b-50">
+				<div class="row">
+					<div class="col-md-1 col-lg-2"></div>
+					<div class="col-md-10 col-lg-8">
+						<div class="intro">
+							<div class="profile-img">
+								<img
+									src="images/mepic.png"
+									alt=""
+								/>
+							</div>
+							<h2><b>Brian Lynn</b></h2>
+							<h4 class="font-yellow">
+								Full Stack Web Developer
+							</h4>
+							<div class="icons-container">
+								<ul class="social-icons ">
+									<li>
+										<a href="https://www.linkedin.com/in/brian-lynn-729145117/"
+											><i class="ion-social-linkedin"></i
+										></a>
+									</li>
+									<li>
+										<a href="https://github.com/brianplynn"
+											><i class="ion-social-github"></i
+										></a>
+									</li>
+									<li>
+										<a href="mailto:brnlynn889@gmail.com"
+											><i class="ion-email"></i
+										></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- intro -->
+					</div>
+					<!-- col-sm-8 -->
+				</div>
+				<!-- row -->
+			</div>
+			<!-- container -->
+		</section>
+		<!-- intro-section -->
+
+		<section class="portfolio-section section"> 
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="heading">
+							<h3><b>Portfolio</b></h3>
+						</div>
+					</div>
+					<!-- col-sm-4 -->
+					<div class="col-sm-8">
+						<div class="portfolioFilter clearfix margin-b-80">
+							<button class="btn-portfolio current" onclick="filterSelection('all')"
+								><b>ALL</b></button
+							>
+							<button class="btn-portfolio" onclick="filterSelection('personal')"
+								><b>PERSONAL</b></button
+							>
+							<button class="btn-portfolio" onclick="filterSelection('freelance')"
+								><b>FREELANCE</b></button
+							>
+							<button class="btn-portfolio" onclick="filterSelection('open-source')"
+								><b>OPEN SOURCE</b></button
+							>
+						</div>
+						<!-- portfolioFilter -->
+					</div>
+					<!-- col-sm-8 -->
+				</div>
+				<!-- row -->
+
+				<div class="portfolioContainer">
+				  <div class="personal p-item">
+					  <button class="modal-btn" type="button" data-toggle="modal" data-target="#project-modal-one">
+			              <div class="project-title"><h3>Wellness Tracker</h3>
+			              </div>
+			                <img class="project-image" src="images/wellness-tracker.png">
+			          </button>
+		          </div>
+		           <div class="p-item open-source">
+			          <button class="modal-btn open-source" type="button" data-toggle="modal" data-target="#project-modal-two">
+			              <div class="project-title"><h3>Metro On Time</h3></div>
+			                <img class="project-image" src="images/metro-on-time.png">
+			          </button>
+			      </div>
+		          <div class="p-item open-source ">
+			            <button class="modal-btn open-source" type="button" data-toggle="modal" data-target="#project-modal-three">
+			              <div class="project-title"><h3>Jobs For Hope</h3></div>
+			                <img class="project-image" src="images/jobs-for-hope.png">
+			          </button>
+			      </div>
+		          <div class="p-item freelance">
+		            <button class="modal-btn freelance" type="button" data-toggle="modal" data-target="#project-modal-four">
+		              <div class="project-title"><h3>Sloane + Silver</h3></div>
+		                <img class="project-image" src="images/sloane+silver.png">
+		            </button>
+		          </div>
+		          <div class="p-item personal">
+		          <button class="modal-btn personal" type="button" data-toggle="modal" data-target="#project-modal-five">
+		              <div class="project-title"><h3>Nota Bene</h3></div>
+		                <img class="project-image" src="images/nota-bene.png">
+		          </button>	
+		          </div>  
+		          <div class="p-item p-item-empty"></div>     
+				</div>
+				<!-- portfolioContainer -->
+			</div>
+			<!-- container -->
+		</section>
+		<!-- portfolio-section -->
+		<!-- portfolio modals go here -->
+		<section>
+		  <div class="modal fade" id="project-modal-one" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -94,13 +157,15 @@
                 </div>
                 <div class="modal-body">
                   <p>
-                    This wellness tracker allows the user to log sleep, nutrition, and exercise habits. Users can log in with their Facebook or Github profile. Built using React (with Redux), Express, and PostgreSQL, I chose to build this app in order to solidify my knowledge of Javascript and React, while still introducing new learned concepts.
+                    This wellness tracker allows the user to log sleep, nutrition, and exercise habits. Users can log in with their Facebook or Github profile. Built using React (with Redux), Express, and PostgreSQL, I chose to build this app in order to solidify my knowledge of Javascript and React, while still introducing newly learned concepts.
                   </p>
+                  <br />
                   <p>Challenges:</p>
                   <ul>
-                    <li>Managing the size of a relatively larger application.</li>
-                    <li>Properly using API calls, for both the Facebook and Github OAuth logins and the Edamam food database API.</li>
-                    <li>Implementing Redux, as well as react-router and redux-thunk, in a larger application.</li>
+                    <li>- Managing the size of a relatively larger application.</li>
+                    <li>- Properly using API calls, for both the Facebook and Github OAuth logins and the Edamam food database API.</li>
+                    <li>- Implementing Redux, as well as react-router and redux-thunk, in a larger application.</li>
+                  </ul>
                 </div>
                 <div class="modal-footer">
                   <a href="https://wellness-tracker.surge.sh/" target="_blank" class="btn btn-primary modal-github-button">View App</a>
@@ -110,28 +175,110 @@
               </div>
             </div>
           </div>
-          <button class="modal-btn" type="button" data-toggle="modal" data-target="#project-modal-two">
-              <div class="project-title"><h3>Nota Bene</h3></div>
-                <img class="project-image" src="images/nota-bene.png">
-          </button>
-          <div class="modal fade" id="project-modal-two" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+		  <div class="modal fade" id="project-modal-two" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">
+                    Metro On Time
+                  </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Metro On Time is an open-source project that aims to provide L.A. Metro and its riders accurate, digestible train reliability data. It is built with React and Next.js on the front-end and Node, Express, and Python on the back-end.</p>
+                  <br>
+                  <p>My major contribution to this project thus far is a history tab that allows users to access past metro reliability data in a visually appealing manner. I am currently working on other data visualization efforts, including a redesign of the main page.</p>
+                  <br>
+                  <p>Challenges:</p>
+                  <ul>
+                    <li>- Quickly learning frameworks such as Next.js and Material UI on the front-end and Amazon S3 on the back-end</li>
+                    <li>- Manipulating a large dataset to display historical data in chart form based on various X-axis and Y-axis user inputs</li>
+                    <li>- Building an optimal and low-cost path to grab historical data from the database</li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                  <a href="https://la.railstats.org/" target="_blank" class="btn btn-primary modal-github-button">View App</a>
+                  <a href="https://github.com/metro-ontime" target="_blank" class="btn btn-primary modal-github-button">View on Github</a>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>    
+                </div>
+              </div>
+            </div>
+          </div>
+		  <div class="modal fade" id="project-modal-three" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">
+                    Jobs For Hope
+                  </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Jobs For Hope is an open-source project done in conjunction with the L.A. Homeless Initiative. The service is meant to aggregate job opportunities for homeless service providers so that non-profit workers can find a job that matches their skillset. It is built with React on the front-end and Node, Express, and PostgreSQL on the back-end.</p>
+                  <br>
+                  <p>
+                  	My major, ongoing contribution to the site has been to create an authentication system that allows employers to create accounts and post jobs as they would on any other job board. I have done this from the ground-up using Express, Passport.js, Express-Session, and bcrypt.
+                  </p>
+                  <br>
+                  <p>Challenges:</p>
+                  <ul>
+                    <li>- Learning the intracacies of encryption, cookies, and session management</li>
+                    <li>- Creating an authentication flow that allows site admins to approve accounts before they are allowed to post jobs</li>
+                    <li>- Following authentication best practices</li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                  <a href="http://jobs-for-hope.herokuapp.com/" target="_blank" class="btn btn-primary modal-github-button">View App</a>
+                  <a href="https://github.com/hackforla/jobs-for-hope" target="_blank" class="btn btn-primary modal-github-button">View on Github</a>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>    
+                </div>
+              </div>
+            </div>
+          </div>
+		  <div class="modal fade" id="project-modal-four" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">
+                    Sloane + Silver
+                  </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Utilizing CSS + Javascript on top of a SquareSpace template, I am helping Sloane + Silver Realty construct a website to help display their luxury listings in the greater L.A. area.</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="https://www.sloaneandsilver.com/" target="_blank" class="btn btn-primary modal-github-button">View Site</a>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>    
+                </div>
+              </div>
+            </div>
+          </div>
+		  <div class="modal fade" id="project-modal-five" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalCenterTitle">
                     Nota Bene
                   </h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
                   <p>Built using React, Express, and PostgreSQL, Nota Bene was my first attempt at creating a full-stack web application from scratch. The app allows a user to create and store notes, in a manner similar to the iPhone's Notes app. Users can log in at any time to access their notes.</p>
+                  <br>
                   <p>Challenges:</p>
                   <ul>
-                    <li>Tying my front-end and back-end knowledge together into one cohesive app</li>
-                    <li>Managing my application's state in React to allow for seamless creation and deletion of notes, as well as maintaining an order based on last edit time</li>
-                    <li>Keeping the notes data on the front-end consistent with the notes data in the database</li>
+                    <li>- Tying my front-end and back-end knowledge together into one cohesive app</li>
+                    <li>- Managing my application's state in React to allow for seamless creation and deletion of notes, as well as maintaining an order based on last edit time</li>
+                    <li>- Keeping the notes data on the front-end consistent with the notes data in the database</li>
                   </ul>
                 </div>
                 <div class="modal-footer">
@@ -142,74 +289,187 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="module" id="freelance-module">
-        <div class="freelance-header"><h2>Freelance Projects:</h2></div>
-        <div class="freelance-tile-container">
-          <button class="freelance-modal-btn" type="button" data-toggle="modal" data-target="#freelance-modal-two">
-              <div class="freelance-title"><h3>Sloane + Silver Realty</h3></div>
-                <img class="freelance-image" src="images/sloane+silver.png">
-          </button>
-          <div class="modal fade" id="freelance-modal-two" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalCenterTitle">
-                    Sloane + Silver Realty
-                  </h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p>Utilizing CSS + Javascript on top of a SquareSpace template, I am helping Sloane + Silver Realty construct a website to help display their luxury listings in the greater L.A. area.</p>
-                  <p>Note: My work with Sloane + Silver is ongoing and this is by no means a finished project. </p>
-                </div>
-                <div class="modal-footer">
-                  <a href="https://www.sloaneandsilver.com/" target="_blank" class="btn btn-primary modal-github-button">View Site</a>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>    
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="module" id="social-module">
-        <div class="social-header"><h2>Let's get in touch:</h2></div>
-        <div id = "social-buttons">
-          <div class="social-btn">
-          <a href="https://www.linkedin.com/in/brian-lynn-729145117/" target="_blank">
-            <img src="images/linkedin.png">
-          </a>
-          </div>
-          <div class="social-btn small">
-            <a href="https://github.com/brianplynn" target="_blank">
-              <img src="images/github.png">
-            </a>
-          </div>
-          <div class="social-btn">
-            <a href="mailto:brnlynn889@gmail.com" target="_blank">
-              <img src="images/gmail.png">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <section id="navbar">
-        <button id="home-btn">HOME</button>
-        <button class="navlink" id="about-btn">ABOUT</button>
-        <button class="navlink" id="projects-btn">PROJECTS</button>
-        <div class="subnav-flex">
-        <button class="navlink" id="freelance-btn">FREELANCE</button>
-        <button class="navlink" id="social-btn">CONTACT</button>
-        </div>
-    </section>
+		</section>
+		<!-- modal-section -->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="scripts/script.js"></script>
-  </div>
-  </body>
+		<section class="about-section section">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="heading">
+							<h3><b>About Me</b></h3>
+						</div>
+					</div>
+					<!-- col-sm-4 -->
+					<div class="col-sm-8">
+						<h4><b>BIO</b></h4>
+						<p class="margin-b-50 about-desc">
+							After graduating with a B.A. in Economics from
+							Occidental College in 2018, I decided to capitalize
+							on my passion for computer science and creative
+							design by teaching myself web development. Now, I'm
+							using my newfound skills to create fast, responsive,
+							and dynamic web applications.
+						</p>
+						<h4><b>SKILLS</b></h4>
+						<p class="margin-b-50 about-desc">
+						<span class="skill">HTML</span>
+						<span class="skill">CSS</span>
+						<span class="skill">Javascript</span>
+						<span class="skill">React</span>
+						<span class="skill">Redux</span>
+						<span class="skill">Express</span>
+						<span class="skill">PostgreSQL</span>
+						<span class="skill">MongoDB</span>
+						<span class="skill">Next.js</span>
+						<span class="skill">RESTful APIs</span>
+						</p>
+					</div>
+					<!-- col-sm-8 -->
+				</div>
+				<!-- row -->
+			</div>
+			<!-- container -->
+		</section>
+		<!-- about-section -->
+
+		<section class="experience-section section">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="heading">
+							<h3><b>Work Experience</b></h3>
+						</div>
+					</div>
+					<!-- col-sm-4 -->
+					<div class="col-sm-8">
+						<div class="experience margin-b-50">
+							<h4><b>CONTRIBUTOR</b></h4>
+							<h5 class="font-yellow"><b>HACK FOR LA</b></h5>
+							<h6 class="margin-t-10">MARCH 2019 - PRESENT</h6>
+							<ul class="list margin-tb-30">						<li class="two-line-item">
+									Using Express and Passport.js, created an authentication system for employers on a site meant to aggregate homeless nonprofit jobs.
+								</li>
+								<li class="two-line-item">
+									Added both front-end and back-end features
+									to an ongoing project that allows users to
+									access L.A. Metro reliability data.
+								</li>
+								<li>
+									Developed teamwork and communication skills
+									in a collaborative environment.
+								</li>
+							</ul>
+						</div>
+						<!-- experience -->
+
+						<div class="experience margin-b-50">
+							<h4><b>WEB DEVELOPER</b></h4>
+							<h5 class="font-yellow"><b>FREELANCE</b></h5>
+							<h6 class="margin-t-10">FEBRUARY 2019 - PRESENT</h6>
+							<ul class="list margin-tb-30">
+								<li>
+									Utilized technical HTML, CSS, and Javascript
+									skills to build responsive websites.
+								</li>
+								<li>
+									Maintained strong customer relations and
+									consistently delivered quality product.
+								</li>
+							</ul>
+						</div>
+						<!-- experience -->
+					</div>
+					<!-- col-sm-8 -->
+				</div>
+				<!-- row -->
+			</div>
+			<!-- container -->
+		</section>
+		<!-- experience-section -->
+
+		<section class="education-section section">
+			<div class="container margin-b-50">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="heading">
+							<h3><b>Contact</b></h3>
+						</div>
+					</div>
+					<!-- col-sm-4 -->
+					<div class="col-sm-8">
+						<form>
+							<div class="form-group">
+								<label for="exampleFormControlInput1"
+									>Email address</label
+								>
+								<input
+									type="email"
+									class="form-control"
+									id="exampleFormControlInput1"
+									placeholder="name@example.com"
+									required
+								/>
+							</div>
+							<div class="form-group">
+								<label for="exampleFormControlTextarea1"
+									>Message</label
+								>
+								<textarea
+									class="form-control"
+									id="exampleFormControlTextarea1"
+									rows="5"
+									required
+								></textarea>
+							</div>
+							<button type="submit" class="btn btn-primary">
+								Submit
+							</button>
+						</form>
+					</div>
+					<!-- col-sm-8 -->
+				</div>
+				<!-- row -->
+			</div>
+			<!-- container -->
+		</section>
+		<!-- about-section -->
+
+		<footer>
+			<div class="copyright">
+				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				
+				<p><a href="mailto:brnlynn889@gmail.com">
+				brnlynn889@gmail.com</a> | <a href="tel:+14846249073">484.624.9073</a>
+				</p>
+				<p>Copyright &copy;<script>
+					document.write(new Date().getFullYear());
+				</script>
+				All Rights Reserved</p>
+				<p>
+				 Template by
+				<a href="https://colorlib.com" target="_blank">Colorlib</a>
+				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+			</div>
+		</footer>
+
+		<!-- SCIPTS -->
+
+		<script src="common-js/jquery-3.2.1.min.js"></script>
+
+		<script src="common-js/tether.min.js"></script>
+
+		<script src="common-js/bootstrap.js"></script>
+
+		<script src="common-js/isotope.pkgd.min.js"></script>
+
+		<script src="common-js/jquery.waypoints.min.js"></script>
+
+		<script src="common-js/progressbar.min.js"></script>
+
+		<script src="common-js/jquery.fluidbox.min.js"></script>
+
+		<script src="common-js/scripts.js"></script>
+	</body>
 </html>
