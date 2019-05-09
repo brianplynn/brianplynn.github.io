@@ -326,6 +326,11 @@ modal-github-button:focus {
 	opacity: .8;
 }
 
+#msg-alert {
+	height: 3rem;
+	margin-top: 1rem;
+}
+
 /* ---------------------------------
 10. FOOTER
 --------------------------------- */

@@ -187,3 +187,23 @@ function isExists(elem) {
 	}
 	return false;
 }
+
+var formSubmit = document.getElementById("form-submit-btn")
+var formEmail = document.getElementById("exampleFormControlInput1").value
+var formMessage = document.getElementById("exampleFormControlTextarea1").value
+
+formSubmit.addEventListener("click", function(e) {
+	e.preventDefault();
+	fetch('https://portfolio-blynn-backend.herokuapp.com//api/mail', {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify({
+			email: formEmail,
+			message: formMessage
+		})
+	}).then(response => {
+		window.location.href = "/";		
+	})
+})
