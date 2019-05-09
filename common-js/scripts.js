@@ -204,6 +204,6 @@ formSubmit.addEventListener("click", function(e) {
 			message: formMessage
 		})
 	}).then(response => {
-		window.location.href = "/";		
+		console.log(response);
 	})
 })
