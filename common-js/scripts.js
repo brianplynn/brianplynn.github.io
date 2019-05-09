@@ -193,7 +193,6 @@ var formEmail = document.getElementById("exampleFormControlInput1").value
 var formMessage = document.getElementById("exampleFormControlTextarea1").value
 
 formSubmit.addEventListener("click", function(e) {
-	console.log("hi");
 	fetch('https://portfolio-blynn-backend.herokuapp.com/api/mail', {
 		method: "POST",
 		headers: {
@@ -204,6 +203,6 @@ formSubmit.addEventListener("click", function(e) {
 			message: formMessage
 		})
 	}).then(response => {
-		console.log(response);
+		window.location.href = "/";		
 	})
 })
