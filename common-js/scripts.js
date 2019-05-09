@@ -189,20 +189,33 @@ function isExists(elem) {
 }
 
 var formSubmit = document.getElementById("form-submit-btn")
-var formEmail = document.getElementById("exampleFormControlInput1").value
-var formMessage = document.getElementById("exampleFormControlTextarea1").value
+var emailInput = document.getElementById("exampleFormControlInput1");
+var messageInput = document.getElementById("exampleFormControlTextarea1");
+var msgAlert = document.getElementById("msg-alert");
+var msgAlertErr = document.getElementById("msg-alert-bad");
 
 formSubmit.addEventListener("click", function(e) {
-	fetch('https://portfolio-blynn-backend.herokuapp.com/api/mail', {
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-		},
-		body: JSON.stringify({
-			email: formEmail,
-			message: formMessage
+	var formEmail = emailInput.value;
+	var formMessage = messageInput.value
+	if (formEmail && formMessage) {
+		e.preventDefault();
+		msgAlert.innerHTML = "Sending...";
+		msgAlert.classList.remove("hid");
+		fetch('https://portfolio-blynn-backend.herokuapp.com/api/mail', {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				email: formEmail,
+				message: formMessage
+			})
+		}).then(response => response.json())
+		  .then(result => {
+			msgAlert.innerHTML = result.status;
+			setTimeout(function() {
+				msgAlert.classList.add("hid")
+			}, 5000)
 		})
-	}).then(response => {
-		window.location.href = "/";		
-	})
+	}
 })

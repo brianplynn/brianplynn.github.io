@@ -331,6 +331,17 @@ modal-github-button:focus {
 	margin-top: 1rem;
 }
 
+#top-message {
+  z-index: 10;
+	position: fixed;
+	width: 90%;
+	max-width: 400px;
+  height:50px;
+  left:50%;
+  transform:translateX(-50%);
+  top:10px;
+}
+
 /* ---------------------------------
 10. FOOTER
 --------------------------------- */
