@@ -192,7 +192,7 @@ var formSubmit = document.getElementById("form-submit-btn")
 var emailInput = document.getElementById("exampleFormControlInput1");
 var messageInput = document.getElementById("exampleFormControlTextarea1");
 var msgAlert = document.getElementById("msg-alert");
-var msgAlertErr = document.getElementById("msg-alert-bad");
+var msgAlertErr = document.getElementById("msg-alert-fail");
 
 formSubmit.addEventListener("click", function(e) {
 	var formEmail = emailInput.value;
@@ -220,5 +220,17 @@ formSubmit.addEventListener("click", function(e) {
 				msgAlert.classList.add("hid")
 			}, 5000)
 		})
+	} else if (!formEmail) {
+		msgAlertErr.innerHTML = "E-mail Address is Required";
+		msgAlertErr.classList.remove("hid");
+		setTimeout(function() {
+				msgAlertErr.classList.add("hid")
+			}, 5000)
+	} else if (!formMessage) {
+		msgAlertErr.innerHTML = "Message is Required";
+		msgAlertErr.classList.remove("hid");
+		setTimeout(function() {
+				msgAlertErr.classList.add("hid")
+			}, 5000)
 	}
 })
