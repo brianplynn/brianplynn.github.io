@@ -197,11 +197,8 @@ var msgAlertErr = document.getElementById("msg-alert-fail");
 formSubmit.addEventListener("click", function(e) {
 	var formEmail = emailInput.value;
 	var formMessage = messageInput.value
-	console.log(formEmail);
-	console.log(formMessage);
 	if (formEmail && formMessage) {
 		e.preventDefault();
-		console.log("inside function");
 		msgAlert.innerHTML = "Sending...";
 		msgAlert.classList.remove("hid");
 		fetch('https://portfolio-blynn-backend.herokuapp.com/api/mail', {
