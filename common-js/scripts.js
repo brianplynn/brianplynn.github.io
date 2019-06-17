@@ -188,7 +188,7 @@ function isExists(elem) {
 	return false;
 }
 
-var formSubmit = document.getElementById("form-submit-btn")
+var formSubmit = document.getElementById("form-submit-btn");
 var emailInput = document.getElementById("exampleFormControlInput1");
 var messageInput = document.getElementById("exampleFormControlTextarea1");
 var msgAlert = document.getElementById("msg-alert");
@@ -196,38 +196,40 @@ var msgAlertErr = document.getElementById("msg-alert-fail");
 
 formSubmit.addEventListener("click", function(e) {
 	var formEmail = emailInput.value;
-	var formMessage = messageInput.value
+	var formMessage = messageInput.value;
 	if (formEmail && formMessage) {
 		e.preventDefault();
 		msgAlert.innerHTML = "Sending...";
 		msgAlert.classList.remove("hid");
-		fetch('https://portfolio-blynn-backend.herokuapp.com/api/mail', {
+		fetch("https://portfolio-blynn-backend.herokuapp.com/api/mail", {
 			method: "POST",
+			mode: "no-cors",
 			headers: {
-				"Content-Type": "application/json",
+				"Content-Type": "application/json"
 			},
 			body: JSON.stringify({
 				email: formEmail,
 				message: formMessage
 			})
-		}).then(response => response.json())
-		  .then(result => {
-			msgAlert.innerHTML = result.status;
-			setTimeout(function() {
-				msgAlert.classList.add("hid")
-			}, 5000)
 		})
+			.then(response => response.json())
+			.then(result => {
+				msgAlert.innerHTML = result.status;
+				setTimeout(function() {
+					msgAlert.classList.add("hid");
+				}, 5000);
+			});
 	} else if (!formEmail) {
 		msgAlertErr.innerHTML = "E-mail Address is Required";
 		msgAlertErr.classList.remove("hid");
 		setTimeout(function() {
-				msgAlertErr.classList.add("hid")
-			}, 5000)
+			msgAlertErr.classList.add("hid");
+		}, 5000);
 	} else if (!formMessage) {
 		msgAlertErr.innerHTML = "Message is Required";
 		msgAlertErr.classList.remove("hid");
 		setTimeout(function() {
-				msgAlertErr.classList.add("hid")
-			}, 5000)
+			msgAlertErr.classList.add("hid");
+		}, 5000);
 	}
-})
+});
